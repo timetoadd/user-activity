@@ -6,10 +6,11 @@ const DeveloperProfile = ({ id, developers }) => {
 
   return (
     <div>
-      <h2>{developers[id - 1].name}'s Profile</h2>
-      <p>{developers[id - 1].bio}</p>
-      <p>Email: {developers[id - 1].email}</p>
-
+      <div className="developer-profile-container">
+        <h2 className="developer-name">{developers[id - 1].name}'s Profile</h2>
+        <p className="developer-skills">{developers[id - 1].bio}</p>
+        <p className="developer-email">Email: {developers[id - 1].email}</p>
+      </div>
       <LoginActivityChart />
     </div>
   );
