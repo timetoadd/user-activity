@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import LoginActivityChart from './activityChart.js';
+import LoginActivityChart from './LoginActivityChart.js';
 
 export default function App() {
   return (
