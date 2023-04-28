@@ -3,17 +3,17 @@ import './AppStyles.css';
 
 const DevelopersList = ({ developers, onDeveloperSelect }) => {
   return (
-    <div>
-      <h2>List of Developers</h2>
-      <ul>
-        {developers.map((developer) => (
-          <li key={developer.id}>
-            <button onClick={() => onDeveloperSelect(developer.id)}>
-              {developer.name}
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="developers-container">
+      {developers.map((developer) => (
+        <div>
+          <div
+            className="developer-card"
+            onClick={() => onDeveloperSelect(developer.id)}
+          >
+            <div className="developer-name">{developer.name}</div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
