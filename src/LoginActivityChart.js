@@ -37,23 +37,27 @@ const LoginActivityChart = () => {
 
   const chartOptions = {
     scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          fontColor: '#333'
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+            fontColor: '#333',
+          },
+          gridLines: {
+            color: 'rgba(0, 0, 0, 0.1)',
+          },
         },
-        gridLines: {
-          color: 'rgba(0, 0, 0, 0.1)'
-        }
-      }],
-      xAxes: [{
-        ticks: {
-          fontColor: '#333'
+      ],
+      xAxes: [
+        {
+          ticks: {
+            fontColor: '#333',
+          },
+          gridLines: {
+            color: 'rgba(0, 0, 0, 0.1)',
+          },
         },
-        gridLines: {
-          color: 'rgba(0, 0, 0, 0.1)'
-        }
-      }]
+      ],
     },
     tooltips: {
       callbacks: {
