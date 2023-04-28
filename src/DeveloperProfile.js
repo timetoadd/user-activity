@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginActivityChart from './LoginActivityChart.js';
+import RulesData from './RulesData.js';
 
 const DeveloperProfile = ({ id, developers }) => {
   if (id == null) return;
@@ -11,7 +12,14 @@ const DeveloperProfile = ({ id, developers }) => {
         <p className="developer-skills">{developers[id - 1].bio}</p>
         <p className="developer-email">Email: {developers[id - 1].email}</p>
       </div>
-      <LoginActivityChart />
+      <br />
+      <div className="developer-profile-container">
+        <LoginActivityChart />{' '}
+      </div>
+      <br />
+      <div className="developer-profile-container">
+        <RulesData developers={developers} />{' '}
+      </div>
     </div>
   );
 };

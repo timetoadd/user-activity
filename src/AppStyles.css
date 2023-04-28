@@ -93,3 +93,19 @@
     grid-row: 2 / span 1;
   }
 }
+
+.developers-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.developers-table th,
+.developers-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.developers-table th {
+  background-color: #f2f2f2;
+}
