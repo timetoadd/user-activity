@@ -1,4 +1,5 @@
 import React from 'react';
+import './AppStyles.css';
 
 const DevelopersList = ({ developers, onDeveloperSelect }) => {
   return (
