@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Line } from 'react-chartjs-2';
-//import Chart from 'chart.js';
+import Chart from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
 const LoginActivityChart = () => {
   const [chartData, setChartData] = useState({});
@@ -13,9 +13,9 @@ const LoginActivityChart = () => {
           {
             label: 'User Login Activity',
             data: [], // an array of integers representing the number of logins per day
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
           },
         ],
       };
@@ -35,20 +35,41 @@ const LoginActivityChart = () => {
     setChartData(data);
   }, []);
 
-  return (
-    <Line
-      data={chartData}
-      options={{
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
+  const chartOptions = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          fontColor: '#333'
         },
-      }}
-      chart={Chart}
-    />
-  );
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0.1)'
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          fontColor: '#333'
+        },
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0.1)'
+        }
+      }]
+    },
+    tooltips: {
+      callbacks: {
+        label: function (tooltipItem, data) {
+          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+          if (label) {
+            label += ': ';
+          }
+          label += tooltipItem.yLabel;
+          return label;
+        },
+      },
+    },
+  };
+
+  return <Bar data={chartData} options={chartOptions} chart={Chart} />;
 };
 
 export default LoginActivityChart;
