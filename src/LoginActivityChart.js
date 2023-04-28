@@ -11,7 +11,7 @@ const LoginActivityChart = () => {
         labels: [], // an array of date strings for the past 90 days
         datasets: [
           {
-            label: 'User Login Activity',
+            label: 'Commit activity - 90 Days',
             data: [], // an array of integers representing the number of logins per day
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
