@@ -11,7 +11,7 @@ const LoginActivityChart = () => {
         labels: [], // an array of date strings for the past 90 days
         datasets: [
           {
-            label: 'Commit activity - 90 Days',
+            label: 'Pega Commit activity - 30 Days',
             data: [], // an array of integers representing the number of logins per day
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
@@ -20,8 +20,8 @@ const LoginActivityChart = () => {
         ],
       };
 
-      // generate data for the past 90 days
-      for (let i = 89; i >= 0; i--) {
+      // generate data for the past 30 days
+      for (let i = 29; i >= 0; i--) {
         const date = new Date();
         date.setDate(date.getDate() - i);
         data.labels.push(date.toLocaleDateString());
