@@ -24,6 +24,7 @@ const DeveloperProfile = ({ id, developers }) => {
             {developers[id - 1].githubProfile}
           </a>
         </p>
+        
       </div>
       <br />
       <div className="developer-profile-container">
