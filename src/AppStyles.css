@@ -62,6 +62,14 @@
   font-weight: bold;
 }
 
+.developer-profile {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
+}
+
 .developer-email {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
@@ -78,6 +86,21 @@
   color: #666666;
 }
 
+.developer-github-profile {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
+}
+
+.developer-ads {
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
+}
 @media (max-width: 768px) {
   .developer-profile-container {
     grid-template-columns: 1fr;
