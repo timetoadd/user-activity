@@ -14,6 +14,7 @@ const developers = [
     bio: 'Full Stack Developer',
     email: 'johndoe@example.com',
     skills: ['React', 'Node.js', 'JavaScript'],
+    team: 'Andromeda',
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const developers = [
     bio: 'Frontend Developer',
     email: 'janedoe@example.com',
     skills: ['React', 'CSS', 'HTML'],
+    team: 'Aviators',
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const developers = [
     bio: 'Backend Developer',
     email: 'bobsmith@example.com',
     skills: ['Node.js', 'Express', 'MongoDB'],
+    team: 'Andromeda',
   },
 ];
 

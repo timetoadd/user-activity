@@ -2,34 +2,28 @@ import React from 'react';
 import './AppStyles.css';
 
 const DevelopersList = ({ developers, onDeveloperSelect }) => {
+  const teams = [...new Set(developers.map((item) => item.team))];
   return (
     <div>
-      <h1>Andromeda:</h1>
-      <div className="developers-container">
-        {developers.map((developer) => (
-          <div>
-            <div
-              className="developer-card"
-              onClick={() => onDeveloperSelect(developer.id)}
-            >
-              <div className="developer-name">{developer.name}</div>
-            </div>
+      {teams.map((team) => (
+        <div>
+          <h1> {team}:</h1>
+          <div className="developers-container">
+            {developers
+              .filter((each) => each.team === team)
+              .map((developer) => (
+                <div>
+                  <div
+                    className="developer-card"
+                    onClick={() => onDeveloperSelect(developer.id)}
+                  >
+                    <div className="developer-name">{developer.name}</div>
+                  </div>
+                </div>
+              ))}
           </div>
-        ))}
-      </div>
-      <h1>Aviators:</h1>
-      <div className="developers-container">
-        {developers.map((developer) => (
-          <div>
-            <div
-              className="developer-card"
-              onClick={() => onDeveloperSelect(developer.id)}
-            >
-              <div className="developer-name">{developer.name}</div>
-            </div>
-          </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
