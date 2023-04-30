@@ -5,6 +5,9 @@ import RulesData from './RulesData.js';
 const DeveloperProfile = ({ id, developers }) => {
   if (id == null) return;
 
+  let allskills = '';
+  developers[id - 1].skills.map((skill) => (allskills += skill + ', '));
+
   return (
     <div>
       <div className="developer-profile-container">
@@ -18,6 +21,10 @@ const DeveloperProfile = ({ id, developers }) => {
         </p>
         <p className="developer-ads">ADS: {developers[id - 1].id}</p>
         <p className="developer-email">Email: {developers[id - 1].email}</p>
+        <p className="developer-skills">
+          Skills:
+          {allskills}
+        </p>
         <p className="developer-github-profile">
           Github:{' '}
           <a href={developers[id - 1].githubProfile} target="_blank">
