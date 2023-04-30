@@ -9,7 +9,7 @@ const DeveloperProfile = ({ id, developers }) => {
     <div>
       <div className="developer-profile-container">
         <h2 className="developer-name">{developers[id - 1].name}'s Profile</h2>
-        <p className="developer-skills">{developers[id - 1].bio}</p>
+        <p className="developer-bio">{developers[id - 1].bio}</p>
         <p className="developer-profile">
           Profile:{' '}
           <a href={developers[id - 1].profile} target="_blank">
@@ -24,13 +24,13 @@ const DeveloperProfile = ({ id, developers }) => {
             {developers[id - 1].githubProfile}
           </a>
         </p>
-        
       </div>
       <br />
       <div className="developer-profile-container">
         <LoginActivityChart />{' '}
       </div>
       <br />
+      <p>Rules Info:</p>
       <div className="developer-profile-container">
         <RulesData developers={developers} />{' '}
       </div>
